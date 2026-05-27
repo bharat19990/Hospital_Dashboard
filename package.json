@@ -25,6 +25,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.15.11",
     "@types/node": "^20.19.0",
     "@types/node-cache": "^4.2.5",
     "@types/react": "^18.3.24",
