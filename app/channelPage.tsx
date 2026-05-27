@@ -19,17 +19,12 @@ import {
   Bar,
 } from "recharts";
 import {
-  Activity as ActivityIcon,
-  BarChart3,
   Camera as CameraIcon,
   DollarSign as DollarIcon,
-  Eye as EyeIcon,
   ExternalLink,
   Info,
-  MapPin as MapPinIcon,
   MessageCircle as MessageIcon,
   Play as PlayIcon,
-  Search as SearchIcon,
   Sparkles,
   Users as UsersIcon,
 } from "lucide-react";
@@ -46,14 +41,9 @@ import { cn, formatINR } from "@/lib/utils";
 const iconMap = {
   play: PlayIcon,
   dollar: DollarIcon,
-  map: MapPinIcon,
   users: UsersIcon,
   camera: CameraIcon,
   message: MessageIcon,
-  search: SearchIcon,
-  bar: BarChart3,
-  eye: EyeIcon,
-  activity: ActivityIcon,
 };
 
 function formatMetricValue(label: string, value: string | number) {
@@ -247,7 +237,7 @@ function DataTable({ table }: { table: ChannelPageData["tables"][number] }) {
 
 export function ChannelPage({ slug }: { slug: keyof typeof channelPages }) {
   const page = channelPages[slug];
-  const Icon = iconMap[page.icon as keyof typeof iconMap] ?? ActivityIcon;
+  const Icon = iconMap[page.icon as keyof typeof iconMap] ?? Sparkles;
   const admits = zohoAdmitsByChannel[page.slug] ?? [];
   const revenue = admits.length * 50000;
 
@@ -283,10 +273,10 @@ export function ChannelPage({ slug }: { slug: keyof typeof channelPages }) {
 
       <ChartCard title={page.primaryChart.title}>{renderPrimaryChart(page.primaryChart)}</ChartCard>
 
-      <section className={cn("grid gap-5", page.zoho && page.slug !== "semrush" && page.slug !== "clarity" ? "lg:grid-cols-[3fr_2fr]" : "lg:grid-cols-1")}>
+      <section className={cn("grid gap-5", page.zoho ? "lg:grid-cols-[3fr_2fr]" : "lg:grid-cols-1")}>
         {renderSecondary(page)}
-        {page.zoho && page.slug !== "semrush" && page.slug !== "clarity" ? (
-          <ZohoAdmitPanel channel={page.zoho.channel} admits={admits} totalRevenue={revenue} totalAdmits={243} />
+        {page.zoho ? (
+          <ZohoAdmitPanel channel={page.zoho.channel} admits={admits} totalRevenue={revenue} totalAdmits={173} />
         ) : null}
       </section>
 

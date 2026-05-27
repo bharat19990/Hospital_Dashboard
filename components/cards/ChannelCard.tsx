@@ -21,14 +21,9 @@ const statusDot: Record<ChannelStatus, string> = {
 const channelBadge: Record<string, string> = {
   YouTube: "bg-red-600 text-white",
   "Google Ads": "bg-blue-600 text-white",
-  "Google Business": "bg-blue-500 text-white",
   Facebook: "bg-blue-600 text-white",
   Instagram: "bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 text-white",
   WhatsApp: "bg-emerald-500 text-white",
-  "Search Console": "bg-slate-100 text-slate-700",
-  SEMrush: "bg-orange-500 text-white",
-  Clarity: "bg-blue-600 text-white",
-  GA4: "bg-orange-500 text-white",
 };
 
 function getInitials(name: string) {

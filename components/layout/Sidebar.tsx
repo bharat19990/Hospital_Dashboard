@@ -1,16 +1,11 @@
 "use client";
 
 import {
-  Activity,
-  BarChart3,
   Camera,
   DollarSign,
-  Eye,
   Home,
-  MapPin,
   MessageCircle,
   Play,
-  Search,
   Settings,
   Users,
 } from "lucide-react";
@@ -25,14 +20,9 @@ const navItems: Array<{ label: string; href: string; icon: Icon }> = [
   { label: "Dashboard", href: "/dashboard", icon: Home },
   { label: "YouTube", href: "/youtube", icon: Play },
   { label: "Google Ads", href: "/google-ads", icon: DollarSign },
-  { label: "Google Business", href: "/google-business", icon: MapPin },
   { label: "Facebook", href: "/facebook", icon: Users },
   { label: "Instagram", href: "/instagram", icon: Camera },
   { label: "WhatsApp", href: "/whatsapp", icon: MessageCircle },
-  { label: "Search Console", href: "/search-console", icon: Search },
-  { label: "SEMrush", href: "/semrush", icon: BarChart3 },
-  { label: "Clarity", href: "/clarity", icon: Eye },
-  { label: "GA4", href: "/ga4", icon: Activity },
   { label: "Settings", href: "/settings", icon: Settings },
 ];
 

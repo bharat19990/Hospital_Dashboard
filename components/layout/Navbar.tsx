@@ -11,14 +11,9 @@ const pageTitles: Record<string, string> = {
   "/dashboard": "Dashboard",
   "/youtube": "YouTube",
   "/google-ads": "Google Ads",
-  "/google-business": "Google Business",
   "/facebook": "Facebook",
   "/instagram": "Instagram",
   "/whatsapp": "WhatsApp",
-  "/search-console": "Search Console",
-  "/semrush": "SEMrush",
-  "/clarity": "Clarity",
-  "/ga4": "GA4",
   "/settings": "Settings",
 };
 

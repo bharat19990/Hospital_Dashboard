@@ -1,6 +1,6 @@
 "use client";
 
-import { Activity, DollarSign, Home, Settings, Users } from "lucide-react";
+import { Camera, DollarSign, Home, Settings, Users } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { ComponentType, SVGProps } from "react";
@@ -12,7 +12,7 @@ const mobileItems: Array<{ label: string; href: string; icon: Icon }> = [
   { label: "Dashboard", href: "/dashboard", icon: Home },
   { label: "Ads", href: "/google-ads", icon: DollarSign },
   { label: "Facebook", href: "/facebook", icon: Users },
-  { label: "GA4", href: "/ga4", icon: Activity },
+  { label: "Instagram", href: "/instagram", icon: Camera },
   { label: "Settings", href: "/settings", icon: Settings },
 ];
 
